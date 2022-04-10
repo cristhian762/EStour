@@ -29,13 +29,19 @@ header > .container {
   width: 228px;
 }
 
+.nav {
+  align-items: center;
+  justify-content: end;
+}
+
 .nav-link {
   color: var(--text);
   font-size: 21px;
   font-weight: 700;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
   color: black;
 }
 
@@ -53,6 +59,11 @@ header > .container {
   height: 33px;
 }
 
-body {
-  background-color: black;
+.magnifier {
+  display: flex;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: translateX(-30px) scaleX(-1);
+  width: 20px;
 }
