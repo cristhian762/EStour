@@ -74,7 +74,7 @@ header > .container {
   width: 20px;
 }
 
-.banner > img {
+.carousel-item {
   height: 500px;
   width: 100%;
 }
