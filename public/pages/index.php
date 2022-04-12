@@ -43,14 +43,14 @@
         
         <div class="categorie-items">
           <div>
-            <div class="col" id="cat_1"><a href="categoria/?religioso">RELIGIOSO</a></div>
-            <div class="col" id="cat_2"><a href="categoria/?gastronomia">GASTRONOMIA</a></div>
-            <div class="col" id="cat_3"><a href="categoria/?nautico">NÁUTICO</a></div>
-            <div class="col" id="cat_4"><a href="categoria/?praia">PRAIA</a></div>
-            <div class="col" id="cat_5"><a href="categoria/?evento">EVENTOS</a></div>
-            <div class="col" id="cat_6"><a href="categoria/?agroturismo">AGROTURISMO</a></div>
-            <div class="col" id="cat_7"><a href="categoria/?ecoturismo">ECOTURISMO</a></div>
-            <div class="col" id="cat_8"><a href="categoria/?cultura">CULTURA</a></div>
+            <div class="col" id="cat_1"><a href="categoria.php/?religioso">RELIGIOSO</a></div>
+            <div class="col" id="cat_2"><a href="categoria.php/?gastronomia">GASTRONOMIA</a></div>
+            <div class="col" id="cat_3"><a href="categoria.php/?nautico">NÁUTICO</a></div>
+            <div class="col" id="cat_4"><a href="categoria.php/?praia">PRAIA</a></div>
+            <div class="col" id="cat_5"><a href="categoria.php/?evento">EVENTOS</a></div>
+            <div class="col" id="cat_6"><a href="categoria.php/?agroturismo">AGROTURISMO</a></div>
+            <div class="col" id="cat_7"><a href="categoria.php/?ecoturismo">ECOTURISMO</a></div>
+            <div class="col" id="cat_8"><a href="categoria.php/?cultura">CULTURA</a></div>
           </div>
         </div>
       </section>
@@ -118,6 +118,8 @@
     </main>
     
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWmqMNElrDYemBdpIvzqH7xHlhXPj3xFk&callback=initMap&v=weekly" async ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <?php echo file_get_contents('components/footer.html') ?>
+
   </body>
 </html>

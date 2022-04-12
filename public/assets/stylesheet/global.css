@@ -31,9 +31,15 @@ header > .container {
 
 .logo {
   background-image: url("../../../image/logo.png");
+  cursor: pointer;
   transform: scale(0.7);
   height: 93px;
   width: 228px;
+  transition: 200ms;
+}
+
+.logo:hover {
+  transform: scale(0.8);
 }
 
 .nav {
@@ -50,6 +56,7 @@ header > .container {
 .nav-link:hover,
 .nav-link:focus {
   color: black;
+  text-decoration: underline;
 }
 
 .search {
