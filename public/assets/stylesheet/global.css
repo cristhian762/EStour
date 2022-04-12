@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
   font-family: "Open Sans";
+  box-sizing: border-box;
 }
 
 h2 {
@@ -74,15 +75,6 @@ header > .container {
   width: 20px;
 }
 
-.carousel-item {
-  height: 500px;
-  width: 100%;
-}
-
-.container > section {
-  padding: 70px 0;
-}
-
 .card {
   margin: 0 20px;
 }
@@ -108,7 +100,118 @@ header > .container {
   justify-content: center;
 }
 
+#interactive {
+  margin-top: 100px;
+}
+
+.card {
+  transition: 300ms;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
 #map {
-  height: 80vh;
+  height: 100vh;
   width: 100%;
+}
+
+.carousel-item > div {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+#banner_1 {
+  background-image: url("https://i.ytimg.com/vi/hXU9bxeosfU/maxresdefault.jpg");
+  background-position: center center;
+}
+
+#banner_2 {
+  background-image: url("http://s.glbimg.com/jo/g1/f/original/2014/10/02/nx5qzv45rjwllknwj2ss5lbz1597387.jpg");
+  background-position: center center;
+}
+
+#banner_3 {
+  background-image: url("https://rodoviariaonline.com.br/wp-content/uploads/2020/07/confira-as-melhores-praias-do-espirito-santo-3-scaled.jpeg");
+  background-position: center center;
+}
+
+#banner_4 {
+  background-image: url("https://www.viagensecaminhos.com/wp-content/uploads/2010/09/vila-velha-es.jpg");
+  background-position: center center;
+}
+
+#categorie {
+  margin: 100px 0;
+}
+
+.categorie-items {
+  column-count: 4;
+}
+
+.categorie-items > div > div {
+  background-color: #464646;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 250px;
+  width: 105%;
+}
+
+.categorie-items > div > div > a {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 700;
+  height: 100%;
+  text-decoration: none;
+  justify-content: center;
+  transition: 300ms;
+}
+
+.categorie-items > div > div > a:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#cat_1 {
+  background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/religioso.jpg");
+  background-position: center center;
+}
+
+#cat_2 {
+  background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/gastronomia.jpg");
+  background-position: center center;
+}
+
+#cat_3 {
+  background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/Vit%C3%B3ria_2017-08-18%2009-55-04_LeonardoMer%C3%A7on_2%20copy.jpg");
+  background-position: center center;
+}
+
+#cat_4 {
+  background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/praia.jpg");
+  background-position: center center;
+}
+
+#cat_5 {
+  background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/eventos.jpg");
+  background-position: center center;
+}
+
+#cat_6 {
+  background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/agroturismo.jpg");
+  background-position: center center;
+}
+
+#cat_7 {
+  background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/ecoturismo.jpg");
+  background-position: center center;
+}
+
+#cat_8 {
+  background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/cultura.jpg");
+  background-position: center center;
 }

@@ -6,43 +6,60 @@
     <?php echo file_get_contents('components/header.html') ?>
     
     <main>
-      <!-- <section>
-        <div class="banner">
-          <img src="https://blog.tzviagens.com.br/wp-content/uploads/2020/01/espirito-santo-descubra-as-melhores-paisagens-para-visitar7.jpg" alt="espirito-santo-descubra-as-melhores-paisagens-para-visitar7" />
-        </div>
-      </section> -->
-
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div id="carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://blog.tzviagens.com.br/wp-content/uploads/2020/01/espirito-santo-descubra-as-melhores-paisagens-para-visitar7.jpg" class="d-block w-100" alt="...">
+            <div id="banner_1"></div>
           </div>
+
           <div class="carousel-item">
-            <img src="https://miro.medium.com/max/1000/0*tH0xbnsXbfenBGs7.jpg" class="d-block w-100" alt="...">
+            <div id="banner_2"></div>
           </div>
+
           <div class="carousel-item">
-            <img src="https://blog.tzviagens.com.br/wp-content/uploads/2020/01/espirito-santo-descubra-as-melhores-paisagens-para-visitar7.jpg" class="d-block w-100" alt="...">
+            <div id="banner_3"></div>
+          </div>
+
+          <div class="carousel-item">
+            <div id="banner_4"></div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
 
-      <div class="container">
-        <section>
+      <section id="categorie">
+        <div class="container">
           <div>
             <h2>Categorias</h2>
           </div>
-        </section>
-
-        <section>
+        </div>
+        
+        <div class="categorie-items">
           <div>
+            <div class="col" id="cat_1"><a href="categoria/?religioso">RELIGIOSO</a></div>
+            <div class="col" id="cat_2"><a href="categoria/?gastronomia">GASTRONOMIA</a></div>
+            <div class="col" id="cat_3"><a href="categoria/?nautico">NÁUTICO</a></div>
+            <div class="col" id="cat_4"><a href="categoria/?praia">PRAIA</a></div>
+            <div class="col" id="cat_5"><a href="categoria/?evento">EVENTOS</a></div>
+            <div class="col" id="cat_6"><a href="categoria/?agroturismo">AGROTURISMO</a></div>
+            <div class="col" id="cat_7"><a href="categoria/?ecoturismo">ECOTURISMO</a></div>
+            <div class="col" id="cat_8"><a href="categoria/?cultura">CULTURA</a></div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <div class="container">
+        <section id="spotlight">
+          <div style="padding-bottom: 30px">
             <h2>Destaques</h2>
           </div>
           <div class="spotlight">
@@ -87,14 +104,16 @@
           </div>
         </section>
 
-        <section>
+        <section id="interactive">
           <div>
             <h2>Mapa interativo</h2>
           </div>
-          <div>
-          <div id="map"></div>
-          </div>
+          
         </section>
+      </div>
+      
+      <div>
+        <div id="map"></div>
       </div>
     </main>
     
