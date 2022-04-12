@@ -17,6 +17,11 @@ h2 {
   padding-bottom: 20px;
 }
 
+h3 {
+  color: var(--text);
+  font-weight: 700;
+}
+
 header {
   background-color: var(--primary);
   display: flex;
@@ -27,6 +32,12 @@ header {
 header > .container {
   display: flex;
   align-items: center;
+}
+
+a,
+a:hover {
+  color: var(--text);
+  text-decoration: none;
 }
 
 .logo {
@@ -154,11 +165,11 @@ header > .container {
   margin: 100px 0;
 }
 
-.categorie-items {
+.items {
   column-count: 4;
 }
 
-.categorie-items > div > div {
+.items > div > div {
   background-color: #464646;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -166,7 +177,7 @@ header > .container {
   width: 105%;
 }
 
-.categorie-items > div > div > a {
+.items > div > div > a {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
@@ -179,7 +190,7 @@ header > .container {
   transition: 300ms;
 }
 
-.categorie-items > div > div > a:hover {
+.items > div > div > a:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -221,4 +232,99 @@ header > .container {
 #cat_8 {
   background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/cultura.jpg");
   background-position: center center;
+}
+
+/* #################### Categorie.php ###################### */
+
+.title-page {
+  margin: 100px 0 50px 0;
+  font-weight: 700;
+}
+
+#filter {
+  background-color: var(--primary);
+  border-radius: 15px;
+}
+
+#filter > div {
+  padding: 35px 20px;
+  text-align: center;
+}
+
+#filser_search {
+  height: 50px;
+  border: 1px solid var(--secundary);
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.checkbox-filter {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label:before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 4px solid #ffaec8;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-bottom: 3px;
+}
+
+input[type="checkbox"]:hover + label:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='rgba(65, 0, 0, 1)' class='bi bi-check' viewBox='0 0 16 16'%3E%3Cpath d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20px;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='rgba(65, 0, 0, 1)' class='bi bi-check' viewBox='0 0 16 16'%3E%3Cpath d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 20px;
+}
+
+.categorie-items {
+  cursor: pointer;
+  margin: 40px;
+  transition: 200ms;
+}
+
+.categorie-items:hover {
+  transform: scale(1.01);
+}
+
+.categorie-items > a > div {
+  background-color: var(--primary);
+  border-radius: 20px;
+  display: flex;
+}
+
+.categorie-image {
+  border-radius: 20px;
+  height: 250px;
+  width: 300px;
+}
+
+#pico_da_bandeira {
+  background-image: url("https://esbrasil.com.br/wp-content/uploads/2018/06/Pico-da-bandeira-Credito-Adventure-Turismo-de-Aventura.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.categorie-desc {
+  margin: 2rem 2rem;
 }

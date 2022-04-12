@@ -2,4 +2,4 @@
 
 header("Location: public/pages/");
 
-die();
+die(); 
