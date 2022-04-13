@@ -241,12 +241,12 @@ a:hover {
   font-weight: 700;
 }
 
-#filter {
+.filter {
   background-color: var(--primary);
   border-radius: 15px;
 }
 
-#filter > div {
+.filter > div {
   padding: 35px 20px;
   text-align: center;
 }
@@ -327,4 +327,39 @@ input[type="checkbox"]:checked + label:before {
 
 .categorie-desc {
   margin: 2rem 2rem;
+}
+
+/* #################### info.php ###################### */
+
+.info-banner {
+  width: 100%;
+}
+
+.info-banner > div {
+  background-image: url("https://i.pinimg.com/originals/b6/a8/b4/b6a8b46e52d3229b08d4edc8360809e6.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 600px;
+}
+
+.info-description {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: justify;
+}
+
+.information {
+  padding: 0;
+}
+
+.information > li {
+  display: flex;
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+.info-text {
+  margin: 0;
+  padding: 0;
 }

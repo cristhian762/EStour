@@ -14,7 +14,7 @@
 
           <div class="row">
             <div class="col-3">
-              <div id="filter">
+              <div class="filter">
                 <div>
                   <div>
                     <h2>Ordernar por</h2>
@@ -67,7 +67,7 @@
             </div>
             <div class="col-9">
               <div class="categorie-items">
-                <a href="?pico_da_bandeira">
+                <a href="/public/pages/info.php?pedra_da_cebola">
                   <div>
                     <div class="col-auto">
                       <div class="categorie-image">
@@ -89,7 +89,7 @@
               </div>
 
               <div class="categorie-items">
-                <a href="?pico_da_bandeira">
+                <a href="/public/pages/info.php?pedra_da_cebola">
                   <div>
                     <div class="col-auto">
                       <div class="categorie-image">
@@ -111,7 +111,7 @@
               </div>
 
               <div class="categorie-items">
-                <a href="?pico_da_bandeira">
+                <a href="/public/pages/info.php?pedra_da_cebola">
                   <div>
                     <div class="col-auto">
                       <div class="categorie-image">
@@ -133,7 +133,7 @@
               </div>
 
               <div class="categorie-items">
-                <a href="?pico_da_bandeira">
+                <a href="/public/pages/info.php?pedra_da_cebola">
                   <div>
                     <div class="col-auto">
                       <div class="categorie-image">
@@ -155,7 +155,7 @@
               </div>
 
               <div class="categorie-items">
-                <a href="?pico_da_bandeira">
+                <a href="/public/pages/info.php?pedra_da_cebola">
                   <div>
                     <div class="col-auto">
                       <div class="categorie-image">
@@ -177,7 +177,7 @@
               </div>
 
               <div class="categorie-items">
-                <a href="?pico_da_bandeira">
+                <a href="/public/pages/info.php?pedra_da_cebola">
                   <div>
                     <div class="col-auto">
                       <div class="categorie-image">
