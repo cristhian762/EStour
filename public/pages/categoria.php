@@ -70,7 +70,7 @@
             </div>
             <div class="col-9">
               <div class="categorie-items ecoturismo">
-                <a href="?pedra-da-cebola">
+                <a href="/public/pages/info.php?pedra-da-cebola">
                   <div>
                     <div class="col-auto">
                       <div class="categorie-image">
@@ -92,7 +92,7 @@
               </div>
 
               <div class="categorie-items ecoturismo">
-                <a href="?pico_da_bandeira">
+                <a href="/public/pages/info.php?pedra-da-cebola">
                   <div>
                     <div class="col-auto">
                       <div class="categorie-image">
@@ -114,7 +114,7 @@
               </div>
 
               <div class="categorie-items religioso">
-                <a href="?pico_da_bandeira">
+                <a href="/public/pages/info.php?pedra-da-cebola">
                   <div>
                     <div class="col-auto">
                       <div class="categorie-image">
@@ -136,7 +136,7 @@
               </div>
 
               <div class="categorie-items gastronomia">
-                <a href="?pico_da_bandeira">
+                <a href="/public/pages/info.php?pedra-da-cebola">
                   <div>
                     <div class="col-auto">
                       <div class="categorie-image">
@@ -158,7 +158,7 @@
               </div>
 
               <div class="categorie-items nautico">
-                <a href="?pico_da_bandeira">
+                <a href="/public/pages/info.php?pedra-da-cebola">
                   <div>
                     <div class="col-auto">
                       <div class="categorie-image">
