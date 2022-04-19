@@ -241,12 +241,12 @@ a:hover {
   font-weight: 700;
 }
 
-.filter {
+#filter {
   background-color: var(--primary);
   border-radius: 15px;
 }
 
-.filter > div {
+#filter > div {
   padding: 35px 20px;
   text-align: center;
 }
@@ -263,11 +263,11 @@ a:hover {
   margin: 20px 0;
 }
 
-input[type="checkbox"] {
+input[type="radio"] {
   display: none;
 }
 
-input[type="checkbox"] + label:before {
+input[type="radio"] + label:before {
   content: "";
   width: 30px;
   height: 30px;
@@ -280,14 +280,14 @@ input[type="checkbox"] + label:before {
   margin-bottom: 3px;
 }
 
-input[type="checkbox"]:hover + label:before {
+input[type="radio"]:hover + label:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='rgba(65, 0, 0, 1)' class='bi bi-check' viewBox='0 0 16 16'%3E%3Cpath d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z' /%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 20px;
 }
 
-input[type="checkbox"]:checked + label:before {
+input[type="radio"]:checked + label:before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='rgba(65, 0, 0, 1)' class='bi bi-check' viewBox='0 0 16 16'%3E%3Cpath d='M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z' /%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center center;
@@ -316,6 +316,12 @@ input[type="checkbox"]:checked + label:before {
   width: 300px;
 }
 
+.categorie-image > img {
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+}
+
 #pico_da_bandeira {
   background-image: url("https://esbrasil.com.br/wp-content/uploads/2018/06/Pico-da-bandeira-Credito-Adventure-Turismo-de-Aventura.jpg");
   background-repeat: no-repeat;
@@ -329,37 +335,10 @@ input[type="checkbox"]:checked + label:before {
   margin: 2rem 2rem;
 }
 
-/* #################### info.php ###################### */
-
-.info-banner {
-  width: 100%;
-}
-
-.info-banner > div {
-  background-image: url("https://i.pinimg.com/originals/b6/a8/b4/b6a8b46e52d3229b08d4edc8360809e6.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 600px;
-}
-
-.info-description {
-  color: black;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  text-align: justify;
-}
-
-.information {
-  padding: 0;
-}
-
-.information > li {
-  display: flex;
-  list-style-type: none;
-  margin: 20px 0;
-}
-
-.info-text {
-  margin: 0;
-  padding: 0;
+#clear_filter {
+  background-color: var(--secundary);
+  border: 0px;
+  border-radius: 10px;
+  margin-top: 2rem;
+  padding: 10px 20px;
 }
