@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <?php echo file_get_contents('components/head.html') ?>
+  <?php echo str_replace("{{stylesheet}}", "index.css", file_get_contents('components/head.html')); ?>
 
   <body>
     <?php echo file_get_contents('components/header.html') ?>
 
     <main>
-      <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+      <section id="carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div id="banner_1"></div>
@@ -35,12 +35,6 @@
       </div>
 
       <section id="categorie">
-        <div class="container">
-          <div>
-            <h2>Categorias</h2>
-          </div>
-        </div>
-
         <div class="items">
           <div>
             <div class="col" id="cat_1"><a href="categoria.php/?religioso">RELIGIOSO</a></div>

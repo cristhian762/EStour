@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <?php echo file_get_contents('components/head.html') ?>
+  <?php echo str_replace("{{stylesheet}}", "categoria.css", file_get_contents('components/head.html')); ?>
 
   <body>
     <?php echo file_get_contents('components/header.html') ?>
 
     <main>
-      <div class="container">
+      <div class="container" style="margin-top: 7rem;">
         <section>
-          <div>
-            <h1 class="title-page">Categoria</h1>
-          </div>
-
           <div class="row">
             <div class="col-3">
               <div id="filter">
