@@ -1,0 +1,202 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+
+{% load crispy_forms_tags %}
+{% load place_tags %}
+
+
+<!-- block head-->
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/header.css'%}">
+<link rel="stylesheet" href="{% static '/places/css/placeDetail.css' %}">
+<link rel="stylesheet" href="{% static 'css/footer.css'%}">
+
+{% endblock style%}
+
+{% block title%}
+Lugares Para Visitar
+{% endblock title %}
+
+{% block navbar%}
+{% include 'components/header.html' %}
+{% endblock navbar%}
+
+
+{% block content %}
+
+<main class="main-detail">
+    <section class="sec-place-detail">
+        <div class="place-title-name-h1">
+            <h1>{{place.name}}</h1>
+        </div>
+        <div class="place-detail-img" style="background-image: url('{{place.banner.url}}');">
+        </div>
+        <section class="main-place-description">
+
+            <article class="description-place">
+
+                <div class="content-description">
+                    <p>{{place.description}}</p>
+
+                </div>
+
+            </article>
+            <nav class="right-infos">
+                <section class="infos-place">
+                    <br>
+                    <h3 class="text-center">Informações</h3>
+                    <p>
+                        <span>Endereço:</span><br>
+                        &nbsp;&nbsp;<i class="fa-solid fa-location-dot"></i>&nbsp;
+                        {% if place.address_url %}
+                        <a href="{{place.address_url}}">{{place.address_name}}</a>
+                        {% else %}
+                        <span> Não Informado</span>
+                        {% endif %}
+                    </p>
+                    <p>
+                        <span>Telefone:</span><br>
+                        &nbsp;&nbsp;<i class="fa-solid fa-phone-volume"></i>&nbsp;
+                        {% if place.phone %}
+                        <span>{{place.phone}}</span>
+                        {% else %}
+                        <span> Não Informado</span>
+                        {% endif %}
+                    </p>
+                    <p>
+                        <span>Website:</span><br>
+                        &nbsp;&nbsp;<i class="fa-brands fa-internet-explorer"></i>&nbsp;
+                        {% if place.website %}
+                        <a href="{{place.website}}">{{place.name}}</a>
+                        {% else %}
+                        <span> Não Informado</span>
+                        {% endif %}
+                    </p>
+                    <p>
+                        <span>Email de Contato:</span><br>
+                        &nbsp;&nbsp;<i class="fa-solid fa-at"></i>&nbsp;
+                        {% if place.email %}
+                        <a type="email" href="{{place.email}}">{{place.email}}</a>
+                        {% else %}
+                        <span> Não Informado</span>
+                        {% endif %}
+                    </p>
+
+                </section>
+                <div class="line-black"></div>
+                <section class="infos-event-place">
+                    <h3>Eventos</h3>
+                    Em desenvolvimento
+                </section>
+            </nav>
+        </section>
+    </section>
+
+    <section class="gallery min-vh-65">
+        <div class="container-lg">
+            <h2 class="text-center">Galeria de Fotos</h2>
+            <br>
+            <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
+                {% if place.gallery.photos %}
+                {% for photo in place.gallery.photos.all %}
+                <div class="col">
+                    <img src="{{photo.image.url}}" class="gallery-item" alt="gallery">
+                </div>
+                {% endfor %}
+                {%else%}
+                sel fotos
+                {% endif %}
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="img/1.jpg" class="modal-img" alt="modal img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section style="background-color: #f7f6f6;">
+
+
+        <div class="container my-5 py-5 text-dark">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12 col-lg-10 col-xl-8">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h4 class="text-dark mb-0">Comentarios</h4>
+                    </div>
+                    <br>
+                    {% if place.comments %}
+                    {% for comment in place.comments.all %}
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex flex-start">
+                                {% if comment.user.avathar %}
+                                <img class="rounded-circle shadow-1-strong me-3" src="{{comment.user.avathar.url}}"
+                                    alt="avatar" width="40" height="40" />
+                                {% else%}
+                                <img class="rounded-circle shadow-1-strong me-3"
+                                    src="{%static 'img/no_image400x300.png'%}" alt="avatar" width="40" height="40" />
+                                {% endif %}
+                                <div class="w-100">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h6 class="text-primary fw-bold mb-0">
+                                            {{comment.user.username}}
+                                            <span class="text-dark ms-2">{{comment.comment}}</span>
+                                        </h6>
+                                        <p class="mb-0">{{comment.created_at | date:'H:m - d/m/Y'}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <p>Nenhum comentario ainda</p>
+                    {%endif%}
+
+
+                    {%if user.is_authenticated %}
+                    <div class="form-outline mb-4">
+                        <form action="/places/add/{{place.slug}}/{{place.id}}" method="POST">
+                            {% csrf_token %}
+
+                            <div class="mb-3" style="display:flex;">
+                                <input name="comment" placeholder="Escreva um Commentário..." type="text"
+                                    class="form-control" id="comment" aria-describedby="commentHelp"
+                                    style="margin-right: 10px;">
+
+                                <button type="submit" value="Submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    {% else %}
+                    <div class="alert alert-danger" role="alert">
+                        <p>Para comentar, você precisa estar logado no site.</p>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+
+
+{% endblock content%}
+
+{% block footer%}
+{% include 'components/footer.html' %}
+{% endblock footer%}
