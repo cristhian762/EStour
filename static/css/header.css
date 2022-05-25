@@ -1,7 +1,101 @@
 header {
-    background-color: #64b4f075;
+    background-color: #C1E1F9;
+    height: 120px;
 }
 
+.nav {
+    align-items: center;
+    height: 100%;
+    flex-wrap: nowrap;
+}
+
+.nav__logo > a > img {
+    height: 67px;
+    width: 166px;
+}
+
+.nav__box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav__menu {
+    padding: 10 10px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav__menu > ul {
+    display: inline-flex;
+    transform: translateY(10px);
+}
+
+.nav__menu > ul > li {
+    padding: 0 15px;
+}
+
+.nav__menu > ul > li > a{
+    text-decoration: none;
+    color: #464646;
+    font: 1em arial;
+    font-weight: bold;
+}
+
+.nav__search{
+    justify-content: right;
+}
+
+#input-search {
+    border: 1px solid black ;
+    border-radius: 12px;
+    padding-left: 10px;
+    height: 30px;
+    width: 261px;
+    font: 1em arial;
+    background-color: transparent;
+}
+
+.category__box__row {
+    display: flex;
+    justify-content: center ;
+}
+
+.category__box__col {
+    background-color: #0000ff38;
+    border: 1px solid black;
+    min-height: 200px;
+    width: 300px;
+
+}
+
+.mask {
+    background-color: rgba(0, 0, 0, 0.192);
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    transition: 200ms;
+}
+
+.mask:hover {
+    background-color: rgba(0, 0, 0, 0.397);
+
+}
+
+.mask > h3 {
+    align-items: center;
+    color: white;
+    display: flex;
+}
+
+#gastronomia {
+    background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/gastronomia.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ /*
 .nav-bg-bl {
     background-color: #64b4f075;
 }
@@ -17,23 +111,6 @@ header {
     padding-bottom: 2px;
 }
 
-.social-links {
-    background-color: #ffaec8;
-}
-
-.social-links-ul {
-    display: flex;
-    justify-content: right;
-}
-
-.social-links-ul li {
-    padding: 0 5px;
-}
-
-.social-links-ul li:last-child {
-    padding-right: 15px;
-}
-
 .user-drop {
     display: flex;
     justify-content: space-between;
@@ -46,6 +123,7 @@ header {
 }
 
 .head-links:hover {
+
     color: rgb(0, 0, 0) !important;
     font-size: 18px;
     text-decoration: underline;

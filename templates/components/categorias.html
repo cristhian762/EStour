@@ -1,29 +1,25 @@
-{% load static %}
-
-
-<section class="sect-categorias">
+<section class="container">
     <div>
-        <h3>Categorias mais Vistas</h3>
-
+        <h2>Categorias</h2>
     </div>
-    <div class="row">
-
-
-        {% for category in categories%}
-
-        <div class="col-sm-3 categorias-card-pai">
-            <a href="{{ category.get_absolute_url }}">
-                {% if category.banner %}
-                <div class="categorias-card" style="background-image: url({{category.banner.url}})">
-                    {% else %}
-                    <div class="categorias-card" style="background-image: url({% static 'img/no_image400x300.png' %})">
-                        {% endif %}
-                        <h2>{{category.name}}</h2>
+    <div>
+        <div class="category__box">
+            <div class="category__box__row">
+                <div class="category__box__col mask"></div>
+                <div class="category__box__col" id="gastronomia">
+                    <div class="mask">
+                        <h3>Gastronomia</h3>
                     </div>
-            </a>
+                </div>
+                <div class="category__box__col mask">3</div>
+                <div class="category__box__col mask">4</div>
+            </div>
+            <div class="category__box__row">
+                <div class="category__box__col mask">5</div>
+                <div class="category__box__col mask">6</div>
+                <div class="category__box__col mask">7</div>
+                <div class="category__box__col mask">8</div>
+            </div>
         </div>
-        {% endfor %}
-
-
     </div>
 </section>
