@@ -1,72 +1,76 @@
-.sect-categorias {
-    margin-top: 50px;
+#section__category {
+    padding: 5rem 0;
+}
+
+.category__box__row {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
+    justify-content: center ;
 }
 
-.categorias-card-pai {
-    padding: 1px;
-}
-
-.categorias-card {
-
-    background: no-repeat center;
-    background-size: cover;
-    border-radius: 3px;
+.category__box__col {
+    background-color: #0000ff38;
     min-height: 200px;
-    min-width: 250px;
+    width: 25%;
+}
+
+.category__box__col > div {
+    background-color: rgba(0, 0, 0, 0.192);
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: #fff;
-    transition: all 0.3s ease-in-out;
+    height: 100%;
+    transition: 200ms;
 }
 
-.categorias-card:hover {
-    opacity: 0.8;
+.category__box__col > div {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 1038px) {
-    .categorias-card {
-        min-height: 170px;
-        min-width: 212px;
-    }
-
+.category__box__col > div:hover {
+    background-color: rgba(0, 0, 0, 0.308);
 }
 
-@media (max-width: 920px) {
-    .categorias-card {
-        min-height: 150px;
-        min-width: 187px;
-    }
-
+.category__box__col > div > h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    align-items: center;
+    color: white;
+    display: flex;
 }
 
-@media (max-width: 788px) {
-    .categorias-card {
-        min-height: 135px;
-        min-width: 168px;
-    }
-
+.category__img {
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-@media (max-width: 709px) {
-    .categorias-card {
-        min-height: 124px;
-        min-width: 151px;
-    }
-
+#religioso {
+    background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/religioso.jpg");
 }
 
-@media (max-width: 639px) {
-    .categorias-card {
-        min-height: 111px;
-        min-width: 135px;
-    }
-
+#gastronomia {
+    background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/gastronomia.jpg");
 }
+
+#nautico {
+    background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/Vit%C3%B3ria_2017-08-18%2009-55-04_LeonardoMer%C3%A7on_2%20copy.jpg");
+}
+
+#praia {
+    background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/praia.jpg");
+}
+
+#eventos {
+    background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/eventos.jpg");
+}
+
+#agroturismo {
+    background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/agroturismo.jpg");
+}
+
+#ecoturismo {
+    background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/ecoturismo.jpg");
+}
+
+#cultura {
+    background-image: url("https://descubraoespiritosanto.es.gov.br/Media/DescubraOEspiritoSanto/O%20que%20descobrir/cultura.jpg");
+}
+ 
