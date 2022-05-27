@@ -12,13 +12,8 @@
     list-style: none;
 }
 
-body {
-    background-color: #f3f3f3 !important;
-}
-
 .main-content {
     transition: all 0.4s ease;
-    background-color: #f3f3f3;
 }
 
 .mapa-interativo {
