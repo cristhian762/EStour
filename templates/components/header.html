@@ -14,26 +14,35 @@
             <div class="nav__menu">
                 <ul>
                     <li>
-                        <a href="#">Destaques</a>
+                        <a class="nav__item" href="#">Destaques</a>
                     </li>
                     <li>
-                        <a href="{% url 'places:place_list'%}">Lugares Para Visitar</a>
+                        <a class="nav__item" href="{% url 'places:place_list'%}">Categorias</a>
+                    </li>
+                    <li>
+                        <a class="nav__item" href="#maps">Mapas</a></i>
                     </li>
                     {% if user.is_authenticated %}
                     <li>
-                        <a href="#">Meus Favoritos</a>
+                        <a class="nav__item" href="#">Meus Favoritos</a>
                     </li>
                     {% endif %}
+                    <li>
+                        <div class="nav__search">
+                            <input type="text" id="input-search">
+                            <div class="nav__icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+
+                    </li>
 
                 </ul>
             </div>
-            <div class="nav__search">
-                <input type="text" placeholder="Buscar" id="input-search">
+
+            <div class="nav__user">
+                <i class="fa-solid fa-user"></i>
             </div>
-        </div>
-
-        <div aria-label="test">
-
         </div>
     </nav>
 </header>
