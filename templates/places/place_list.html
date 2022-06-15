@@ -24,161 +24,16 @@ Lugares Para Visitar
 {% block navbar%}
 {% include 'components/header.html' %}
 {% endblock navbar%}
-
 {% block content %}
-<main id="main-list">
 
-
-    <div class="container my-3">
-
-        <div class="row">
-            <div class="col-lg-3 " style="margin-top:30px;">
-                <div class=" mb-3 mb-lg-0 list-group-item">
-                    <h5 class="text-center">
-                        Ordenar por:
-                    </h5>
-                    <form action="" method="get">
-                        <select class="col-12 list-group-item-selections">
-                            <option value="">...</option>
-                            <option value="mais-recentes">Mais recentes</option>
-                            <option value="mais-antigo">Mais Antigo</option>
-                            <option value="mais-visitado">Mais Visitado</option>
-                            <option value="mais-avaliado">Mais Avaliado</option>
-                            <option value="menos-avaliado">Menos Avaliado</option>
-                        </select>
-                    </form>
-                    <br>
-                </div>
-
-                <ul class="mb-3 mb-lg-0 cont-categorias-list">
-
-                    <a class="text-decoration-none list-group-item list-group-item-light {% if not category %}active{% endif %}"
-                        href="{% url 'places:place_list' %}">
-                        Todas as Categorias
-                    </a>
-
-                    {% for cat in categories %}
-                    <a class="text-decoration-none list-group-item list-group-item-light {% if category == cat %}active{% endif %}"
-                        href="{{ cat.get_absolute_url }}">
-                        {{ cat.name }}
-                    </a>
-                    {% endfor %}
-                </ul>
-            </div>
-
-            <div class="col-lg-9 cont-list-categoria">
-                {% for spot in place_list %}
-                <div class="card mb-3 cont-card-geral">
-                    <div class="row g-0">
-                        <div class="col-md-4 row g-0" style="align-items: center;">
-                            <a href="{{ spot.get_absolute_url }}" class="next-page"
-                                style="text-decoration:none;color:black;">
-                                {% if spot.banner %}
-                                <img src="{{spot.banner.url}}" class="img-fluid rounded-start img-card"
-                                    alt="{{spot.name}}">
-                                {% else %}
-                                <img src="{% static 'img/no_image400x300.png' %}"
-                                    class="img-fluid rounded-start img-card" alt="{{spot.name}}">
-                                {% endif %}
-                            </a>
-                        </div>
-                        <div class="col-md-7 ">
-                            <div class="card-body cont-card-lits">
-                                <a href="{{ spot.get_absolute_url }}" class="next-page"
-                                    style="text-decoration:none;color:black;">
-                                    <h5 class="card-title">{{spot.name}}</h5>
-                                </a>
-                                <p class="card-text">
-
-                                    {{spot.description | slice:"0:200"}} ...
-                                </p>
-                                <div class="cont-card-avaliacao">
-
-                                    <p class="card-text"><small
-                                            class="text-muted">{{spot.update_at|date:'d/m/Y'}}</small></p>
-                                    <p class="card-text">
-                                        {% include 'components/stars.html' with rating=spot.rating %}
-                                    </p>
-                                    <div class="heart">
-                                        <small class="text-muted">
-                                            <svg class="svg-heart" id="{{user.id}};{{spot.id}}"
-                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24">
-                                                <path
-                                                    d="M12 4.419c-2.826-5.695-11.999-4.064-11.999 3.27 0 7.27 9.903 10.938 11.999 15.311 2.096-4.373 12-8.041 12-15.311 0-7.327-9.17-8.972-12-3.27z" />
-                                            </svg>
-                                        </small>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-md-1 arr-next">
-                            <a class="w-100 h-100 btn btn-outline-secondary bt-list-places"
-                                href="{{ spot.get_absolute_url }}">
-                                <i class="fa-solid fa-caret-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-
-                {% endfor %}
-
-                {% if is_paginated %}
-                {% include "pagination.html" with page=page_obj %}
-                {% endif %}
-            </div>
-        </div>
-    </div>
-    </div>
-
-    {% endblock content%}
-
-    <!-- block meu_right-->
-
-    {% block menu_right%}
-    <div id="noticias-list-places" class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white">
-        <a href="#" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
-            <div class="d-flex w-100 align-items-center justify-content-center">
-                <span class="fs-5 fw-semibold">Notícias</span>
-            </div>
-        </a>
-        <div class="list-group list-group-flush border-bottom scrollarea">
-            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                <div class="d-flex w-100 align-items-center justify-content-between">
-                    <strong class="mb-1">Praia xxxx vai ter um passeio turistico nas montanhas</strong>
-                </div>
-                <div class="col-10 mb-1 small align-items-lg-stretch">
-                    <p>
-                        ipsum dolor sit amet, consectetur
-                        adipisicing elit. Quibusdam...
-                    </p>
-                </div>
-                <div class="col-10 mb-1 small">
-                    <small class="text-muted">12/20/2550</small>
-                </div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-                <div class="d-flex w-100 align-items-center justify-content-between">
-                    <strong class="mb-1">Praia xxxx vai ter um passeio turistico nas montanhas</strong>
-                </div>
-                <div class="col-10 mb-1 small align-items-lg-stretch">
-                    <p>
-                        ipsum dolor sit amet, consectetur
-                        adipisicing elit. Quibusdam...
-                    </p>
-                </div>
-                <div class="col-10 mb-1 small">
-                    <small class="text-muted">12/20/2550</small>
-                </div>
-            </a>
-
+<main>
+    <div class="container category">
+        <div class="category__row">
+            <h1 class="category__title">Título da Categoria</h1>
         </div>
     </div>
 </main>
-{% endblock menu_right%}
-
+{% endblock content%}
 
 {% block footer%}
 {% include 'components/footer.html' %}
