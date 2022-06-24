@@ -6,3 +6,24 @@
     font-size: 2rem;
     color: #464646;
 }
+.select-box .options-container{
+    background: #2f3640;
+    color: #f5f6fa;
+    /*max-height: 0;*/
+    width: 100%;
+    transition: all 0.4s;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+.select-box .options-container.active{
+    max-height: 60;
+    opacity: 1;
+}
+/*
+modifica a cor de fundo da pagina
+body {
+    background-color: #111;
+    color: #FFF;
+    margin: 0;
+}
+*/
